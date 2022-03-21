@@ -13,7 +13,8 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 #given the data above, create a datafram using the labels as row indexes and perform the following tasks#
 
 
-
+exam = pd.DataFrame(exam_data, index=labels)
+print(exam) #this is just to see if it worked 
 
 
 
@@ -35,7 +36,7 @@ i      Kevin    8.0
 j      Jonas   19.0 
 """
 
-
+print(exam.iloc[[1,3,5,6],[1,3]])
 
 
 
@@ -51,7 +52,6 @@ f   20.0     yes
 g   14.5     yes
 
 """
-
 
 
 
