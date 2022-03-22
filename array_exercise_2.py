@@ -38,18 +38,20 @@ print()
 ## Step 5: Superstore is a cashless store and needs to calculate their owed credit card fees. Each sale is subject to a 2% credit card fee.
 #           Using the salesArray, create a new array that stores the 2% fee for each sale and register. Print the array and then print the total fees.
 print("-----------------------------------------------   STEP FIVE  -----------------------------------------------")
-salesfee = np.multiply(salesArray, .02)
-totalfee = salesfee.sum()
-for i in range(len(salesfee)):
-    print("Register", i+1, "fee:", salesfee[i])
-print("Total Fees: ",totalfee)
-
-
+ccfee = 0.02
+regfees = [sum(i) * ccfee for i in salesArray]
+tfees = [[i*ccfee for i in row]for row in salesArray]
+totalfees = np.sum(regfees)
+print("Fees for each register are:", regfees)
+#print(tfees)
+print('The total amount of fees is:', totalfees)
 
 ## Step 6: Using your fee array and salesArray, calculate how much profit Superstore made for each sale after paying credit card fees. Store this in a new array and print it.
 print("-----------------------------------------------   STEP SIX  -----------------------------------------------")
-#profitArray = salesArray - feesArray #FIX THIS WATCH VIDEO
-#print(profitArray)
+Profit = salesArray-tfees
+print("Sales are:",salesArray)
+print("Fees are:",tfees)
+print("Profit made on sale:",Profit)
 
 print()
 
