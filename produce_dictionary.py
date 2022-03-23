@@ -42,8 +42,21 @@ produce_dictionary = {'Potatoes': [0.86, 12219, 10508],
                       'Kale': [5.02, 12293, 61711],
                       'Bok choy': [1.42, 11565, 16422]}
 
+#producelabels = ['Potatoes','Okra','Fava beans','Watermelon','Garlic','Parsnips','Asparagus','Avocados','Celery','Spinach','Cucumber','Apricots','Ginger','Corn','Grapefruit','Eggplant','Green cabbage','Yellow peppers','Grapes','Cherries','Apples','Green beans','Tomatoes','Red onion','Strawberries','Papaya','Butternut squash','Bananas','Lettuce','Carrots','Daikon','Lime','Green peppers','Beets','Coconuts','Orange','Lemon','Brussels sprouts','Kale','Bok choy']
 
+
+#produce = pd.DataFrame(produce_dictionary, index=producelabels)
+#print(produce)
 
 produce = pd.DataFrame(produce_dictionary)
-produce.index = []
-print(produce)
+produce.index = ['Cost Per Pound','Quantity Sold','Total Sale']
+#produce.index = ['Potatoes','Okra','Fava beans','Watermelon','Garlic','Parsnips','Asparagus','Avocados','Celery','Spinach','Cucumber','Apricots','Ginger','Corn','Grapefruit','Eggplant','Green cabbage','Yellow peppers','Grapes','Cherries','Apples','Green beans','Tomatoes','Red onion','Strawberries','Papaya','Butternut squash','Bananas','Lettuce','Carrots','Daikon','Lime','Green peppers','Beets','Coconuts','Orange','Lemon','Brussels sprouts','Kale','Bok choy']
+print(produce.T)
+print('---------------')
+print('---------------')
+print('---------------')
+
+
+print('Question #1: Produce that had the highest and lowest sales in total sales (both name of produce and value)')
+
+print(produce.max())
