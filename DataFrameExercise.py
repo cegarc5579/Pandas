@@ -14,7 +14,7 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 
 
 exam = pd.DataFrame(exam_data, index=labels)
-print(exam) #this is just to see if it worked 
+#print(exam) #this is just to see if it worked 
 
 
 
@@ -36,10 +36,10 @@ i      Kevin    8.0
 j      Jonas   19.0 
 """
 
-print(exam.iloc[[1,3,5,6],[1,3]])
 
 
 
+print(exam[['name','score']])
 
 """
 (2) Select 'name' and 'score' columns in rows 1, 3, 5, 6 from the data frame.
@@ -53,7 +53,7 @@ g   14.5     yes
 
 """
 
-
+print(exam.iloc[[1,3,5,6],[1,3]])
 
 
 
@@ -69,7 +69,7 @@ f  Michael   20.0         3     yes
 """
 
 
-
+print(exam[exam['attempts'] >2])
 
 
 
@@ -85,7 +85,7 @@ j         1      Jonas       yes        19.0
 """
 
 
-
+print(exam[exam['score'].between(15,20)])
 
 
 
@@ -108,5 +108,5 @@ Expected Output:
 """
 
 
-
-
+exam = exam.sort_values(['attempts','name'],ascending=[True,True])
+print(exam)
